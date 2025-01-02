@@ -6,14 +6,15 @@
   
   body {
     text-align: center;
-    background-color: #de63ee;
+    background-color: #15c4c4;
     position: relative;
     min-height: 100vh;
+ 
    
   }
   
   h1 {
-    color: rgb(132, 216, 219);
+    color: rgb(88, 114, 228);
   }
   
   .full-date {
@@ -23,7 +24,7 @@
   .digital-clock {
     font-size: 500%;
     width: 100vw;
-    color: #f34d1b;
+    color: #a0f31b;
     border: 1px solid #7ee771;
     display: flex;
     justify-content: center;
