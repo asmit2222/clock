@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    text-align: center;
+    background-color: #de63ee;
+    position: relative;
+    min-height: 100vh;
+  }
+  
+  h1 {
+    color: rgb(132, 216, 219);
+  }
+  
+  .full-date {
+    font-size: 40px;
+  }
+  
+  .digital-clock {
+    font-size: 500%;
+    color: #f34d1b;
+    border: 1px solid #7ee771;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+  }
+  
+  /* Layout */
+  .main {
+    display: flex;
+    padding: 2em;
+    height: 90vh;
+    justify-content: center;
+    align-items: middle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .clockbox,
+  #clock {
+    width: 100%;
+  }
+  
+  /* Clock styles */
+  .clock-dial{
+    width: 500px;
+    height: 500px;
+    border: 20px solid #156c72;
+    border-radius: 50%;
+    margin: 0 auto;  
+    position: relative;
+}
+.clock-dial::after{
+    content: '';
+    position: absolute;
+    background-color: black;
+    z-index: 12;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+}
+.hour{
+    --rotation:0;
+    font-size: 30px;
+    font-weight: bold;
+    color: #283149;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transform: rotate(var(--rotation));
+}
+.hour-1{
+   --rotation:30deg;
+}
+.hour-2{
+    --rotation:60deg;
+}
+.hour-3{
+    --rotation:90deg;
+}
+.hour-4{
+    --rotation:120deg;
+}
+.hour-5{
+    --rotation:150deg;
+}
+.hour-6{
+    --rotation:180deg;
+}
+.hour-7{
+    --rotation:210deg;
+}
+.hour-8{
+    --rotation:240deg;
+}
+.hour-9{
+    --rotation:270deg;
+}
+.hour-10{
+    --rotation:300deg;
+}
+.hour-11{
+    --rotation:330deg;
+}
+
+.hour-12{
+    --rotation:0deg;
+}
+
+
+.hand{
+    --rotation:0;
+    position: absolute;
+    width: 10px;
+    height: 50%;
+    bottom: 50%;
+    left: 50%;
+
+    /* border: 1px solid white; */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: black;
+    transform-origin: bottom;
+    transform: translateX(-50%) rotate(calc(var(--rotation)* 1deg));
+z-index: 11;
+}
+
+
+.second{
+    width: 3px;
+    height: 40%;
+    background-color: rgb(211, 3, 3);
+}
+.minute{
+    width: 7px;
+    height: 45%;
+    background-color: black;
+}
+.hr{
+    width: 10px;
+    height: 35%;
+    background-color: black;
+}
